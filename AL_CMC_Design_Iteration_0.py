@@ -253,10 +253,10 @@ stds2 = posterior.stddev
 test_re = torch.abs((means2 - y_test)/y_test)
 print("test_re_ave: ", torch.mean(test_re, dim=0))
 
-BATCH_SIZE = 10
+BATCH_SIZE = 32
 #BATCH_SIZE = 32
-NUM_RESTARTS = 10 #20 #50
-RAW_SAMPLES = 16 # 256 #1024
+NUM_RESTARTS = 20 #20 #50
+RAW_SAMPLES = 64 # 256 #1024
 
 
 def optimize_qnehvi_and_get_observation(model, train_x, train_obj, sampler, loop):
